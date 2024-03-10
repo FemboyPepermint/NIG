@@ -123,6 +123,7 @@ namespace _4ITAsk1HledaniMin
                     else
                     {
                         this.BackColor = Color.White;
+                        this.BackgroundImage = null;
                         JeZeleny = false;
                     }
                 }

@@ -31,6 +31,10 @@ namespace _4ITAsk1HledaniMin
         }
         private void Policko_OnPolickoKliknutoR(Policko policko)
         {
+            if (policko.JeOdhaleny)
+            {
+                return;
+            }
             if (!policko.JeZeleny)
             {
                 pocetMin--;
@@ -39,6 +43,7 @@ namespace _4ITAsk1HledaniMin
             {
                 pocetMin++;
             }
+         
 
             AktualizujZobrazenyPocetMin();
         }
