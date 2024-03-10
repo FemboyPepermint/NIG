@@ -33,6 +33,7 @@ namespace _4ITAsk1HledaniMin
         public int Y => y;
 
         public event Action<Policko> OnPolickoKliknuto;
+        public event Action<Policko> OnPolickoKliknutoR;
         private Policko()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace _4ITAsk1HledaniMin
             this.x = x;
             this.y = y;
             this.jeOdhaleny = false;
-            label1.Hide();
+            pictureBox1.Hide();
 
         }
         public void NastavMinovost()
@@ -53,7 +54,48 @@ namespace _4ITAsk1HledaniMin
         public void NastavPocetMinVOkoli(int pocet)
         {
             this.pocetMinOkolo = pocet;
-            this.label1.Text = pocetMinOkolo.ToString();
+            switch (pocetMinOkolo)
+            {
+                case 0:
+                    this.pictureBox1.Image = Image.FromFile("0.png");
+                    this.pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+                    break;
+                case 1:
+                     this.pictureBox1.Image = Image.FromFile("1.png"); 
+                     this.pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+                    break;
+                case 2:
+                     this.pictureBox1.Image = Image.FromFile("2.png"); 
+                     this.pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+                    break;
+                case 3:
+                    this.pictureBox1.Image = Image.FromFile("3.png");
+                    this.pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+                    break;
+                case 4:
+                    this.pictureBox1.Image = Image.FromFile("4.png");
+                    this.pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+                    break;
+                case 5:
+                    this.pictureBox1.Image = Image.FromFile("5.png");
+                    this.pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+                    break;
+                case 6:
+                    this.pictureBox1.Image = Image.FromFile("6.png");
+                    this.pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+                    break;
+                case 7:
+                    this.pictureBox1.Image = Image.FromFile("7.png");
+                    this.pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+                    break;
+                case 8:
+                    this.pictureBox1.Image = Image.FromFile("8.png");
+                    this.pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+                    break;
+
+
+            }
+           // this.label1.Text = pocetMinOkolo.ToString();
         }
 
         private void Policko_MouseClick(object sender, MouseEventArgs e)
@@ -64,11 +106,13 @@ namespace _4ITAsk1HledaniMin
             }
             else if (e.Button == MouseButtons.Right)
             {
+                OnPolickoKliknutoR?.Invoke(this);
                 if (!jeOdhaleny)
                 {
                     if (!JeZeleny)
                     {
-                        this.BackColor = Color.Green;
+                        this.BackgroundImage = Image.FromFile("flag.png"); 
+                        this.BackgroundImageLayout = ImageLayout.Stretch; // natahlý jak guma přez moje péro
                         JeZeleny = true;
                         Form1 form = new Form1();
                         form.pocetMin--;
@@ -86,11 +130,11 @@ namespace _4ITAsk1HledaniMin
 
             
         }
-
+        //mina nuds ( °)( °)
         public void OdhalSe()
         {
             jeOdhaleny = true;
-            label1.Show();
+            pictureBox1.Show();
         }
     }
 }

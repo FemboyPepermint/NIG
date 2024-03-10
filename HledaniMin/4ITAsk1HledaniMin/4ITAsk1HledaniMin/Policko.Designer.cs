@@ -28,36 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
-            // label1
+            // pictureBox1
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "5";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            pictureBox1.Location = new Point(-1, -1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(27, 27);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            pictureBox1.MouseClick += Policko_MouseClick;
             // 
             // Policko
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "Policko";
-            this.Size = new System.Drawing.Size(28, 28);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Policko_MouseClick);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
+            BorderStyle = BorderStyle.FixedSingle;
+            Controls.Add(pictureBox1);
+            Margin = new Padding(0);
+            Name = "Policko";
+            Size = new Size(25, 25);
+            MouseClick += Policko_MouseClick;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
 
-        private Label label1;
+        private PictureBox pictureBox1;
     }
 }

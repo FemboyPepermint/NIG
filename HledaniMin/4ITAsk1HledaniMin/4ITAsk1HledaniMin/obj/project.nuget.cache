@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BgysPitOViOX8rylNvcPq01TCgCVHqSrmag5qokQmHp0EdTCl95TfKktDVF1aEUnShyBAvdYpYjYlVAlgQhGzw==",
+  "dgSpecHash": "ZQJEV528tyUnEYYcwQvXpQvptYkHV+u2a1WATylLKWRkAq/Jtz63tRDE8o1dmyIWmsik6nM5vVa0xJMeNRw3Nw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Femboy\\Downloads\\HledaniMin\\4ITAsk1HledaniMin\\4ITAsk1HledaniMin\\4ITAsk1HledaniMin.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Femboy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\Femboy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\Femboy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\Femboy\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.26\\microsoft.netcore.app.host.win-x64.6.0.26.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\fnaf9\\OneDrive\\Dokumenty\\GitHub\\NIG\\HledaniMin\\4ITAsk1HledaniMin\\4ITAsk1HledaniMin\\4ITAsk1HledaniMin.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Femboy\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Femboy\\.nuget\\packages"
+      "C:\\Users\\fnaf9\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\fnaf9\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

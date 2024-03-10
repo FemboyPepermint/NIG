@@ -14,10 +14,7 @@ namespace _4ITAsk1HledaniMin
             NastavCiselniky();
             AktualizujZobrazenyPocetMin();
         }
-        private void AktualizujZobrazenyPocetMin()
-        {
-            label1.Text = "Počet min: " + pocetMin;
-        }
+     
         private void Policko_OnPolickoKliknuto(Policko policko)
         {
             if (policko.MaMinu)
@@ -26,12 +23,30 @@ namespace _4ITAsk1HledaniMin
             {
                 return;
             }
-             
 
+           
             OdhalPolicko(policko.Y, policko.X);
             ZkontrolujVyhru();
+          
+        }
+        private void Policko_OnPolickoKliknutoR(Policko policko)
+        {
+            if (!policko.JeZeleny)
+            {
+                pocetMin--;
+            }
+            else
+            {
+                pocetMin++;
+            }
+
             AktualizujZobrazenyPocetMin();
         }
+        private void AktualizujZobrazenyPocetMin()
+        {
+            label1.Text = "Počet min: " + pocetMin;
+        }
+
         private void NastavCiselniky()
         {
             for (int i = 0; i < herniPole.GetLength(0); i++)
@@ -87,9 +102,10 @@ namespace _4ITAsk1HledaniMin
             }
         }
 
-
+        // to kde se to bude hrát ne
         private void VytvorHerniPole()
         {
+            //Velikost pole
             herniPole = new Policko[12, 12];
             Policko policko;
             for (int i = 0; i < herniPole.GetLength(0); i++)
@@ -100,10 +116,11 @@ namespace _4ITAsk1HledaniMin
                     herniPole[i, j] = policko;
                     herniPanel.Controls.Add(policko);
                     policko.OnPolickoKliknuto += Policko_OnPolickoKliknuto;
+                    policko.OnPolickoKliknutoR += Policko_OnPolickoKliknutoR;
                 }
             }
         }
-
+        //jestli jsi vyhrál nebo jsi bozo špatny L
         private void ZkontrolujVyhru()
         {
             bool vyhral = herniPole.Cast<Policko>().All(policko => policko.JeOdhaleny || policko.MaMinu);
@@ -113,7 +130,7 @@ namespace _4ITAsk1HledaniMin
                 Application.Restart();
             }
         }
-
+        // send nudes metoda
         private void OdhalPolicko(int y, int x)
         {
             Policko policko = herniPole[y, x];
@@ -146,7 +163,7 @@ namespace _4ITAsk1HledaniMin
             MessageBox.Show("Prohrál jsi");
             Application.Restart();
         }
-
+        //k ničemu jsem liny to mazat lmao 
         private void label1_Click(object sender, EventArgs e)
         {
 

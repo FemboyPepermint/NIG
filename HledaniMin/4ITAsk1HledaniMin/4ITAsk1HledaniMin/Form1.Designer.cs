@@ -38,7 +38,7 @@
             herniPanel.Location = new Point(67, 41);
             herniPanel.Margin = new Padding(3, 2, 3, 2);
             herniPanel.Name = "herniPanel";
-            herniPanel.Size = new Size(315, 270);
+            herniPanel.Size = new Size(305, 305);
             herniPanel.TabIndex = 0;
             // 
             // label1
@@ -55,7 +55,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(444, 338);
+            ClientSize = new Size(706, 512);
             Controls.Add(label1);
             Controls.Add(herniPanel);
             Margin = new Padding(3, 2, 3, 2);
